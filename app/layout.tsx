@@ -16,35 +16,41 @@ const geistMono = Geist_Mono({
 
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://suparnposina.com";
 
 
 export const metadata: Metadata = {
+
   metadataBase: new URL(siteUrl),
 
+
   title:
-    "Suparn Posina | Computer Science Student | Software Engineering Portfolio",
+    "Suparn Posina | Software Engineer Portfolio",
+
 
   description:
-    "Suparn Posina is a Computer Science student at San José State University building software projects focused on backend engineering, artificial intelligence, machine learning, and modern software development.",
+    "Suparn Posina is a Computer Science student at San José State University specializing in software engineering, backend development, AI, machine learning, and scalable software systems.",
 
 
   keywords: [
     "Suparn Posina",
-    "Software Engineering Intern",
+    "Software Engineer",
+    "Software Engineering Student",
     "Computer Science Student",
-    "San José State University Computer Science",
+    "San José State University",
     "Backend Engineer",
     "Backend Developer",
     "Artificial Intelligence",
     "Machine Learning",
     "Computer Vision",
+    "Full Stack Developer",
     "Java",
     "Python",
     "TypeScript",
+    "React",
+    "Next.js",
     "SQL",
-    "Silicon Valley Software Engineer",
-    "Software Developer Portfolio",
+    "Software Engineer Portfolio",
   ],
 
 
@@ -55,46 +61,108 @@ export const metadata: Metadata = {
   ],
 
 
-  creator: "Suparn Posina",
+  creator:
+    "Suparn Posina",
+
+
+  publisher:
+    "Suparn Posina",
+
+
+  category:
+    "Technology",
+
 
 
   openGraph: {
+
     title:
-      "Suparn Posina | Software Engineering Portfolio",
+      "Suparn Posina | Software Engineer Portfolio",
+
 
     description:
-      "Computer Science student at San José State University focused on backend engineering, AI, and software development.",
+      "Software engineering portfolio showcasing backend systems, AI projects, machine learning, and modern software development.",
 
-    url: siteUrl,
+
+    url:
+      siteUrl,
+
 
     siteName:
       "Suparn Posina Portfolio",
 
-    type:
-      "website",
 
     locale:
       "en_US",
+
+
+    type:
+      "website",
+
   },
+
+
+
+  twitter: {
+
+    card:
+      "summary_large_image",
+
+
+    title:
+      "Suparn Posina | Software Engineer Portfolio",
+
+
+    description:
+      "Computer Science student building backend systems, AI applications, and scalable software.",
+
+  },
+
 
 
   robots: {
-    index: true,
-    follow: true,
+
+    index:
+      true,
+
+    follow:
+      true,
+
+    googleBot: {
+
+      index:
+        true,
+
+      follow:
+        true,
+
+    },
+
   },
+
 };
 
 
+
 export default function RootLayout({
+
   children,
+
 }: Readonly<{
+
   children: React.ReactNode;
+
 }>) {
 
+
   return (
+
     <html
+
       lang="en"
+
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
     >
 
       <body className="min-h-full flex flex-col">
@@ -104,5 +172,7 @@ export default function RootLayout({
       </body>
 
     </html>
+
   );
+
 }
